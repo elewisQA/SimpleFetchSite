@@ -24,7 +24,7 @@
 
             </div>
             <div class="col-8">
-                <h1>Some Header</h1>
+                <h1>Caesar's Blog</h1>
             </div>
             <div class="col-2">
 
@@ -36,25 +36,33 @@
             <div class="col-2">
 
             </div>
-            <div class="col-8" style="background-color: lightblue;" id="page-content">
-
+            <div class="col-8" id="editor">
+                <form action="submit">
+                    <label>Title</label>
+                    <input type="text" name="title" id="title" value="title" class="form-control">
+                    <label>Body</label>
+                    <input type="text" name="body" id="body" value="body" class="form-control">
+                    <input type="button" name="Send" id="send" class="btn btn-warning" value="Send">
+                </form>
+                <small id="id"></small>
+                <small id="userId"></small>
             </div>
             <div class="col-2">
-
+                
             </div>
         </div>
         <div class="row">
             <div class="col-2">
 
             </div>
-            <div class="col-8">
-                <button>Go Back</button>
-            </div>
-            <div class="col-2">
+            <div class="col-8" id="page-content">
                 
             </div>
+            <div class="col-2">
+
+            </div>
         </div>
-    </main>
+    </main>     
     <!-- My Scripts -->
     <script src="../javascript/fetchStuff.js"></script>
     <!-- Bootstrap Scripts -->

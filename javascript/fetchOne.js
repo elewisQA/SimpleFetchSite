@@ -1,16 +1,19 @@
 function createPost(postData) {
     console.log(`Rendering post ${postData.id} by ${postData.userId}`);
     // Get the div to put the posts in 
-    let title = document.querySelector('h1');
+    let postContainer = document.querySelector('#page-content');
+    let article = document.createElement('article');
+    article.setAttribute("class", "post");
+    let title = document.createElement('h2');
     title.innerHTML = postData.title;
-
-    let postContainer = document.querySelector('#post-content');
-    let content = document.createElement('p');
+    article.appendChild(title);
+    let content = document.createElement('p'); 
     content.innerHTML = postData.body;
+    article.appendChild(content);
     let author = document.createElement("small");
     author.innerHTML = `Author ID: ${postData.userId} Post ID: ${postData.id}`;
-    postContainer.appendChild(content);
-    postContainer.appendChild(author);
+    article.appendChild(author);
+    postContainer.appendChild(article);
 }
 
 console.log("starting...");
