@@ -5,7 +5,7 @@ function createPost(postData) {
     
     // Create the post object 
     let link = document.createElement("a");
-    link.setAttribute("href", `onePost.html?${postData.id}`)
+    link.setAttribute("href", `onePost.html?id=${postData.id}`)
     link.setAttribute("class", "post");
     let article = document.createElement("article");
     let title = document.createElement("h2");
@@ -24,7 +24,7 @@ function createPost(postData) {
 }
 
 console.log("starting...");
-let myRequest = fetch("http://jsonplaceholder.typicode.com/posts") 
+fetch("http://jsonplaceholder.typicode.com/posts") 
     .then(
         function(response) {
             if (response.status != 200) {
