@@ -24,8 +24,8 @@ function sendEditor() {
     let bodyField = document.querySelector("input#body");
     let idSmall = document.querySelector("small#id");
     let uidSmall = document.querySelector("small#userId");
-    console.log("POST {title: " + titleField.getAttribute("value") 
-    + ", body: " + bodyField.getAttribute("value")
+    console.log("POST {title: " + titleField.value
+    + ", body: " + bodyField.value
     + ", id: " + idSmall.innerHTML
     + ", userId: " + uidSmall.innerHTML
     + "}");
